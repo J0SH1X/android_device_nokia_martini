@@ -42,7 +42,10 @@ BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --tags_offset 0x02000000 --ramdisk_offset 0x02200000
 
-TARGET_PREBUILT_KERNEL := device/nokia/martini/prebuilt/zImage-dtb
+# TARGET_PREBUILT_KERNEL := device/nokia/martini/prebuilt/zImage-dtb
+
+TARGET_KERNEL_CONFIG := msm8974_defconfig
+TARGET_KERNEL_SOURCE := kernel/nokia/martini
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
